@@ -1,0 +1,232 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap');
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-rose-gold: var(--rose-gold);
+  --color-champagne: var(--champagne);
+  --color-nude: var(--nude);
+  --color-ivory: var(--ivory);
+  --color-blush: var(--blush);
+  --color-luxe-black: var(--luxe-black);
+
+  --font-display: 'Playfair Display', serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Brand palette in oklch */
+  --ivory: oklch(0.974 0.008 80);          /* #FAF7F2 */
+  --nude: oklch(0.876 0.035 60);           /* #E8D5C4 */
+  --blush: oklch(0.935 0.018 20);          /* #F5E6E8 */
+  --rose-gold: oklch(0.585 0.105 20);      /* #B76E79 */
+  --champagne: oklch(0.792 0.075 75);      /* #D6B98C */
+  --luxe-black: oklch(0.16 0.005 60);      /* #111111 */
+  --warm-gray: oklch(0.55 0.01 60);
+
+  --background: var(--ivory);
+  --foreground: var(--luxe-black);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--luxe-black);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--luxe-black);
+  --primary: var(--rose-gold);
+  --primary-foreground: var(--ivory);
+  --secondary: var(--nude);
+  --secondary-foreground: var(--luxe-black);
+  --muted: oklch(0.94 0.01 60);
+  --muted-foreground: var(--warm-gray);
+  --accent: var(--champagne);
+  --accent-foreground: var(--luxe-black);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--ivory);
+  --border: oklch(0.88 0.015 60);
+  --input: oklch(0.92 0.01 60);
+  --ring: var(--rose-gold);
+
+  --gradient-luxe: linear-gradient(135deg, oklch(0.585 0.105 20) 0%, oklch(0.792 0.075 75) 100%);
+  --gradient-soft: linear-gradient(180deg, var(--ivory) 0%, var(--blush) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.792 0.075 75), oklch(0.88 0.06 80), oklch(0.585 0.105 20));
+  --gradient-dark: linear-gradient(180deg, oklch(0.18 0.01 30), oklch(0.1 0.005 30));
+
+  --shadow-luxe: 0 30px 80px -20px color-mix(in oklab, var(--rose-gold) 25%, transparent);
+  --shadow-soft: 0 20px 60px -15px color-mix(in oklab, var(--luxe-black) 12%, transparent);
+  --shadow-glow: 0 0 60px color-mix(in oklab, var(--champagne) 40%, transparent);
+
+  --sidebar: var(--ivory);
+  --sidebar-foreground: var(--luxe-black);
+  --sidebar-primary: var(--rose-gold);
+  --sidebar-primary-foreground: var(--ivory);
+  --sidebar-accent: var(--nude);
+  --sidebar-accent-foreground: var(--luxe-black);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--rose-gold);
+}
+
+.dark {
+  --background: oklch(0.13 0.005 30);
+  --foreground: var(--ivory);
+  --card: oklch(0.18 0.008 30);
+  --card-foreground: var(--ivory);
+  --popover: oklch(0.18 0.008 30);
+  --popover-foreground: var(--ivory);
+  --primary: var(--champagne);
+  --primary-foreground: var(--luxe-black);
+  --secondary: oklch(0.22 0.01 30);
+  --secondary-foreground: var(--ivory);
+  --muted: oklch(0.22 0.01 30);
+  --muted-foreground: oklch(0.7 0.02 60);
+  --accent: var(--rose-gold);
+  --accent-foreground: var(--ivory);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: var(--champagne);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  ::selection { background: var(--rose-gold); color: var(--ivory); }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-serif-luxe { font-family: var(--font-serif); }
+  .font-script { font-family: var(--font-script); }
+  .font-sans-luxe { font-family: var(--font-sans); }
+
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-luxe { background: var(--gradient-luxe); }
+  .bg-gradient-soft { background: var(--gradient-soft); }
+  .bg-gradient-dark { background: var(--gradient-dark); }
+
+  .glass {
+    background: color-mix(in oklab, var(--ivory) 60%, transparent);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid color-mix(in oklab, var(--ivory) 40%, transparent);
+  }
+  .glass-dark {
+    background: color-mix(in oklab, var(--luxe-black) 35%, transparent);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid color-mix(in oklab, var(--champagne) 20%, transparent);
+  }
+
+  .shadow-luxe { box-shadow: var(--shadow-luxe); }
+  .shadow-soft-luxe { box-shadow: var(--shadow-soft); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--champagne), transparent);
+  }
+
+  .hover-lift {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-luxe);
+  }
+
+  .image-zoom { overflow: hidden; }
+  .image-zoom img {
+    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .image-zoom:hover img { transform: scale(1.08); }
+
+  .shimmer {
+    background: linear-gradient(110deg, transparent 30%, color-mix(in oklab, var(--champagne) 50%, transparent) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+  }
+
+  @keyframes shimmer {
+    to { background-position: -200% 0; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+  .animate-float { animation: float 7s ease-in-out infinite; }
+
+  @keyframes slow-zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.15); }
+  }
+  .animate-slow-zoom { animation: slow-zoom 20s ease-out forwards; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fade-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+
+  @keyframes fade-in-soft {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fade-in-soft { animation: fade-in-soft 1.4s ease-out both; }
+
+  @keyframes shine-border {
+    0%, 100% { box-shadow: 0 0 0 1px color-mix(in oklab, var(--champagne) 30%, transparent); }
+    50% { box-shadow: 0 0 30px 2px color-mix(in oklab, var(--champagne) 60%, transparent); }
+  }
+  .animate-shine-border { animation: shine-border 4s ease-in-out infinite; }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  .scroll-reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
