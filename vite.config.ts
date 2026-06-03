@@ -12,5 +12,9 @@ export default defineConfig({
         runtime: "nodejs22.x",
       },
     },
+    output: {
+      serverDir: "dist/functions/__server.func",
+      publicDir: "dist/static",
+    },
   },
 });
