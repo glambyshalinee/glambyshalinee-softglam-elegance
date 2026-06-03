@@ -1,11 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "functions": {
-    "server/index.mjs": {
-      "runtime": "nodejs24.x"
-    }
-  },
   "routes": [
     {
       "src": "/assets/(.*)",
