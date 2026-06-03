@@ -1001,7 +1001,7 @@ function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
             {[
-              { Icon: Instagram, href: "https://www.instagram.com/softglam", external: true },
+              { Icon: Instagram, href: "https://www.instagram.com/glambyshalinee", external: true },
               { Icon: MessageCircleIcon, href: "https://wa.me/919340590475", external: true },
               { Icon: Phone, href: "tel:+919340590475", external: false },
               { Icon: Mail, href: "mailto:glambyshalinee@gmail.com", external: false },

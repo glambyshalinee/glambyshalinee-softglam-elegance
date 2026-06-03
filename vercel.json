@@ -1,5 +1,16 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
-  "framework": null
+  "functions": {
+    "server/index.mjs": {
+      "runtime": "nodejs24.x"
+    }
+  },
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/client/assets/$1" },
+    {
+      "src": "/(.*)",
+      "dest": "/server/index.mjs",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"]
+    }
+  ]
 }
