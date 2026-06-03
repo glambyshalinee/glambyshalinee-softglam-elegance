@@ -13,8 +13,9 @@ export default defineConfig({
       },
     },
     output: {
-      serverDir: "dist/functions/__server.func",
-      publicDir: "dist/static",
+      dir: ".vercel/output",
+      serverDir: ".vercel/output/functions/__server.func",
+      publicDir: ".vercel/output/static",
     },
   },
 });
