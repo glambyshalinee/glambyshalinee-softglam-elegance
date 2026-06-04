@@ -809,7 +809,8 @@ function ContactForm() {
         </div>
         <h3 className="font-display text-3xl">Thank you</h3>
         <p className="mt-4 max-w-sm font-serif-luxe text-foreground/70">
-          Your enquiry has been received. Shalinee will personally respond within 24 hours.
+          Your enquiry has been received. Shalinee will personally respond within 24 hours. Check
+          your Gmail spam folder if you don't see our reply.
         </p>
         <button
           onClick={() => setStatus("idle")}
