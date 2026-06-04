@@ -766,27 +766,38 @@ function ContactForm() {
     setErrorMsg("");
     const fd = new FormData(e.currentTarget);
     const payload = {
-      name: String(fd.get("name") || "").trim(),
+      full_name: String(fd.get("name") || "").trim(),
       email: String(fd.get("email") || "").trim(),
       phone: String(fd.get("phone") || "").trim(),
       service: String(fd.get("service") || "").trim(),
-      event_date: String(fd.get("event_date") || "").trim(),
-      message: String(fd.get("message") || "").trim(),
+      preferred_date: String(fd.get("event_date") || "").trim(),
+      vision: String(fd.get("message") || "").trim(),
     };
-    if (!payload.name || !payload.email) {
+    if (!payload.full_name || !payload.email) {
       setStatus("error");
       setErrorMsg("Please fill in your name and email.");
       return;
     }
     try {
-      const res = await fetch("/api/public/contact", {
+      const res = await fetch("https://glambyshalinee.pythonanywhere.com/api/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
-      (e.target as HTMLFormElement).reset();
+      if (res.ok) {
+        setStatus("success");
+        (e.target as HTMLFormElement).reset();
+        return;
+      }
+      const body = await res.json().catch(() => null);
+      if (body?.errors) {
+        setErrorMsg(Object.values(body.errors).join(" "));
+      } else if (body?.error) {
+        setErrorMsg(body.error);
+      } else {
+        setErrorMsg("Something went wrong. Please try again or WhatsApp us.");
+      }
+      setStatus("error");
     } catch {
       setStatus("error");
       setErrorMsg("Something went wrong. Please try again or WhatsApp us.");
