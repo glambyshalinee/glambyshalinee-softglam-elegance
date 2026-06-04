@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import favIcon from "@/assets/fav_icon.jpeg";
 
 function NotFoundComponent() {
   return (
@@ -73,22 +74,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "glambyshalinee" },
-      { name: "description", content: "Glam by Shalinee — luxury bridal and fashion makeup artist creating timeless, elegant, editorial beauty." },
+      {
+        name: "description",
+        content:
+          "Glam by Shalinee — luxury bridal and fashion makeup artist creating timeless, elegant, editorial beauty.",
+      },
       { name: "author", content: "Glam by Shalinee" },
       { property: "og:title", content: "glambyshalinee" },
-      { property: "og:description", content: "Luxury bridal & fashion makeup artistry — soft glam, editorial, timeless." },
+      {
+        property: "og:description",
+        content: "Luxury bridal & fashion makeup artistry — soft glam, editorial, timeless.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@glambyshalinee" },
       { name: "twitter:title", content: "glambyshalinee" },
-      { name: "twitter:description", content: "Luxury bridal & fashion makeup artistry — soft glam, editorial, timeless." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/16dfb8d0-529d-4114-8a8b-d71888797e67/id-preview-8fdc4a41--267c38a9-c813-47d4-a696-e638eafacb0a.lovable.app-1778157121427.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/16dfb8d0-529d-4114-8a8b-d71888797e67/id-preview-8fdc4a41--267c38a9-c813-47d4-a696-e638eafacb0a.lovable.app-1778157121427.png" },
+      {
+        name: "twitter:description",
+        content: "Luxury bridal & fashion makeup artistry — soft glam, editorial, timeless.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/16dfb8d0-529d-4114-8a8b-d71888797e67/id-preview-8fdc4a41--267c38a9-c813-47d4-a696-e638eafacb0a.lovable.app-1778157121427.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/16dfb8d0-529d-4114-8a8b-d71888797e67/id-preview-8fdc4a41--267c38a9-c813-47d4-a696-e638eafacb0a.lovable.app-1778157121427.png",
+      },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "icon",
+        href: favIcon,
+        type: "image/jpeg",
       },
     ],
   }),
