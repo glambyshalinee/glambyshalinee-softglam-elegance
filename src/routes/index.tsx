@@ -605,9 +605,6 @@ function InstagramFeed() {
     <section className="bg-[color:var(--ivory)] py-28 md:py-40">
       <div className="mx-auto max-w-7xl px-6">
         <div className="scroll-reveal flex flex-col items-center text-center">
-          <span className="font-sans-luxe text-xs uppercase tracking-[0.4em] text-[color:var(--rose-gold)]">
-            @aanya.luxe · 124k followers
-          </span>
           <h2 className="mt-4 font-display text-4xl md:text-6xl">
             Follow our <em className="font-serif-luxe italic text-gradient-gold">beauty journey</em>
           </h2>
