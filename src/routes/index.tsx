@@ -609,7 +609,7 @@ function InstagramFeed() {
             Follow our <em className="font-serif-luxe italic text-gradient-gold">beauty journey</em>
           </h2>
           <a
-            href="https://www.instagram.com/softglam"
+            href="https://www.instagram.com/glambyshalinee"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-luxe px-6 py-3 text-xs uppercase tracking-[0.3em] text-[color:var(--ivory)] shadow-soft-luxe transition hover:scale-105"
@@ -622,7 +622,7 @@ function InstagramFeed() {
           {igPosts.map((src, i) => (
             <a
               key={i}
-              href="https://www.instagram.com/softglam"
+              href="https://www.instagram.com/glambyshalinee"
               target="_blank"
               rel="noopener noreferrer"
               className="scroll-reveal group relative aspect-square overflow-hidden rounded-2xl"
@@ -1010,7 +1010,7 @@ function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
             {[
-              { Icon: Instagram, href: "https://www.instagram.com/softglam", external: true },
+              { Icon: Instagram, href: "https://www.instagram.com/glambyshalinee", external: true },
               { Icon: MessageCircleIcon, href: "https://wa.me/919340590475", external: true },
               { Icon: Phone, href: "tel:+919340590475", external: false },
               { Icon: Mail, href: "mailto:glambyshalinee@gmail.com", external: false },
